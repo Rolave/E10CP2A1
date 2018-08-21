@@ -23,6 +23,7 @@ end
 
 class Cuadrado
   include Formula
+  attr_reader :lado
   def initialize(lado)
     @lado = lado
   end
@@ -34,9 +35,9 @@ end
 
 r = Rectangulo.new(8, 4)
 #r.lados
-puts r.perimetro([8,4,8,4])
-puts r.area([8,4,8,4])
+puts r.perimetro([r.base, r.altura, r.base, r.altura])
+puts r.area([r.base, r.altura, r.base, r.altura])
 c = Cuadrado.new(4)
-# c.lados
-# puts c.perimetro
-# puts c.area
+#c.lados
+puts c.perimetro([c.lado, c.lado, c.lado, c.lado])
+puts c.area([c.lado, c.lado, c.lado, c.lado])
